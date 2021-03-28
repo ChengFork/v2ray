@@ -26,7 +26,7 @@ You can download the release installer zip file and install it via the Magisk Ma
 
 - Please make sure the config is correct. You can check it by running a command :
 
-   `export XRAY_LOCATION_ASSET=/data/xray; xray -test -config /data/xray/config.json`  in android terminal or ssh.
+   `export XRAY_LOCATION_ASSET=/data/xray; xray -test -configdir /data/xray/config`  in android terminal or ssh.
 
 - dnscrypt-proxy config file is store in `/data/xray/dnscrypt-proxy/` folder, you can update cn domains list via running the shell script `update-rules.sh` or if you dislike the default rules, you can edit them by yourself. ( If you want to disable dnscrypt-proxy, just delete the config file `/data/xray/dnscrypt-proxy/dnscrypt-proxy.toml` )
 
