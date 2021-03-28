@@ -64,7 +64,7 @@ ui_print "- Copy Xray config and data files"
 echo "192.168.43.0/24" > /data/xray/softap.list
 [ -f /data/xray/resolv.conf ] || \
 unzip -j -o "${ZIPFILE}" "xray/etc/resolv.conf" -d /data/xray >&2
-unzip -j -o "${ZIPFILE}" "xray/etc/config" -d /data/xray >&2
+unzip -j -o "${ZIPFILE}" "xray/etc/config/*" -d /data/xray/config/ >&2
 [ -f /data/xray/dnscrypt-proxy/dnscrypt-blacklist-domains.txt ] || \
 unzip -j -o "${ZIPFILE}" 'xray/etc/dnscrypt-proxy/dnscrypt-blacklist-domains.txt' -d /data/xray/dnscrypt-proxy >&2
 [ -f /data/xray/dnscrypt-proxy/dnscrypt-blacklist-ips.txt ] || \
@@ -80,8 +80,8 @@ unzip -j -o "${ZIPFILE}" 'xray/etc/dnscrypt-proxy/dnscrypt-whitelist.txt' -d /da
 [ -f /data/xray/dnscrypt-proxy/example-dnscrypt-proxy.toml ] || \
 unzip -j -o "${ZIPFILE}" 'xray/etc/dnscrypt-proxy/example-dnscrypt-proxy.toml' -d /data/xray/dnscrypt-proxy >&2
 unzip -j -o "${ZIPFILE}" 'xray/etc/dnscrypt-proxy/update-rules.sh' -d /data/xray/dnscrypt-proxy >&2
-[ -f /data/xray/config.json ] || \
-cp /data/xray/config.json.template /data/xray/config.json
+[ -f /data/xray/config/base.json ] || \
+cp /data/xray/config/* /data/xray/config/
 ln -s /data/xray/resolv.conf $MODPATH/system/etc/resolv.conf
 # generate module.prop
 ui_print "- Generate module.prop"
