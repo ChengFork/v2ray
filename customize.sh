@@ -62,6 +62,7 @@ rm "${download_xray_zip}"
 ui_print "- Copy Xray config and data files"
 [ -f /data/xray/softap.list ] || \
 echo "192.168.43.0/24" > /data/xray/softap.list
+echo "0" > /data/xray/appid.list
 [ -f /data/xray/resolv.conf ] || \
 unzip -j -o "${ZIPFILE}" "xray/etc/resolv.conf" -d /data/xray >&2
 unzip -j -o "${ZIPFILE}" "xray/etc/config/*" -d /data/xray/config/ >&2
