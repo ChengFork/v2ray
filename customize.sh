@@ -41,7 +41,7 @@ download_rules_dir="/data/xray/run"
 download_xray_zip="${download_rules_dir}/xray-core.zip"
 curl "${download_xray_link}" -k -L -o "${download_xray_zip}" >&2
 for i in geosite geoip; do
-  curl "${download_xray_link}/$i" -k -L -o "${download_rules_dir}/$i.dat" >&2
+  curl "${download_xray_link}/$i.dat" -k -L -o "${download_rules_dir}/$i.dat" >&2
 done
 if [ "$?" != "0" ] ; then
   ui_print "Error: Download Xray core failed."
