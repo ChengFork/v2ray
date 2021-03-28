@@ -1,0 +1,22 @@
+{
+  "inbounds": [{
+    "port": 65535,
+    "listen": "0.0.0.0",
+    
+    "tag": "proxy-inbound",
+    "protocol": "dokodemo-door",
+
+    "settings": {
+      // Disable timeout setting for keeping persistent connection. Such as FCM.   
+      //  "timeout": 10,
+      "userLevel": 8,
+      "network": "tcp,udp",
+      "followRedirect": true
+    },
+    // If you wanna bypass BT streams, you should enable it.
+    "sniffing": {
+        "destOverride": ["http","tls"],
+        "enabled": true
+        }
+      }]
+}

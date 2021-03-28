@@ -1,0 +1,27 @@
+{
+  "outbounds": [{
+    // Replace your proxy protocol in this section, like: Trojan, VMESS, VLESS or Shadowsocks
+    "protocol": "freedom",
+
+    // Settings of the protocol. Varies based on protocol.
+    "settings": {},
+
+    // Tag of the outbound. May be used for routing.
+    "tag": "proxy"
+  },
+  {
+    // Protocol name of the outbound proxy.
+    "protocol": "freedom",
+
+    // Settings of the protocol. Varies based on protocol.
+    "settings": {},
+
+    // Tag of the outbound. May be used for routing.
+    "tag": "direct"
+  },
+  {
+    "protocol": "blackhole",
+    "settings": {},
+    "tag": "blocked"
+  }]
+}

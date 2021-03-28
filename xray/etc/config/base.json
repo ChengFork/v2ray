@@ -1,0 +1,27 @@
+{
+    "log": {
+    // By default, Xray writes access log to stdout.
+    "access": "none",
+
+    // By default, Xray write error log to stdout.
+    "error": "/data/v2ray/run/error.log",
+
+    // Log level, one of "debug", "info", "warning", "error", "none"
+    "loglevel": "warning"
+  },
+    // Api enables gRPC APIs for external programs to communicate with V2Ray instance.
+  //"api": {
+    //"tag": "api",
+    //"services": [
+    //  "HandlerService",
+    //  "LoggerService",
+    //  "StatsService"
+    //]
+  //},
+    "dns": {},
+    "stats": {},
+    "policy": {},
+    "transport": {},
+    "routing": {},
+    "inbounds": []
+}

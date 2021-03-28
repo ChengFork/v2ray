@@ -1,0 +1,43 @@
+    "rules": [
+    {
+      "type": "field",
+      "outboundTag": "blocked",
+      "domain": [
+        "geosite:category-ads-all"
+      ]
+    },
+    {
+      // Direct FCM to decrease battery consumption
+      "type": "field",
+      "port": 5228,
+      "outboundTag": "direct"
+    },
+    {
+      "type": "field",
+      "outboundTag": "direct",
+      "domain": [
+        "geosite:cn",
+        "geoip:cn",
+        "geoip:private",
+        "geosite:private",
+        "geosite:apple-cn",
+        "geosite:google-cn",
+        "geosite:tld-cn",
+        "geosite:category-games@cn"
+      ]
+    },
+    {
+      "type": "field",
+      "outboundTag": "proxy",
+      "domain": [
+        "geosite:netflix",
+        "geosite:hulu",
+        "geosite:disney"
+      ]
+    },
+    {
+     "type": "field",
+     "outboundTag": "proxy",
+     "network": "tcp,udp"
+    }
+    ]
