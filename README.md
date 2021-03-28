@@ -2,7 +2,7 @@
 
 This is a xray module for Magisk, and includes binaries for arm, arm64, x86, x64.
 
-Besides, it's a fork of [V2ray](<https://github.com/Magisk-Modules-Repo/v2ray>)
+Besides, it's a fork of [v2ray](<https://github.com/Magisk-Modules-Repo/v2ray>)
 
 ## Included
 
