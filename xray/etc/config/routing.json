@@ -1,3 +1,4 @@
+{
     "rules": [
     {
       "type": "field",
@@ -41,3 +42,4 @@
      "network": "tcp,udp"
     }
     ]
+}
