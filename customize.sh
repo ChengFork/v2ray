@@ -37,16 +37,20 @@ case "${ARCH}" in
     download_xray_link="${official_xray_link}/download/${latest_xray_version}/xray-linux-64.zip"
     ;;
 esac
-download_rules_dir="/data/xray/run"
+download_rules_dir="/data/xray"
 download_xray_zip="${download_rules_dir}/xray-core.zip"
 curl "${download_xray_link}" -k -L -o "${download_xray_zip}" >&2
-for i in geosite geoip; do
-  curl "${download_xray_link}/$i.dat" -k -L -o "${download_rules_dir}/$i.dat" >&2
-done
 if [ "$?" != "0" ] ; then
   ui_print "Error: Download Xray core failed."
   exit 1
 fi
+for i in geosite geoip; do
+  curl "${download_xray_link}/$i.dat" -k -L -o "${download_rules_dir}/$i.dat" >&2
+  if [ "$?" != "0" ] ; then
+  ui_print "Error: Download $i failed."
+  exit 1
+fi
+done
 # install xray execute file
 ui_print "- Install Xray core $ARCH execute files"
 # instead with github.com/Loyalsoldier/v2ray-rules-dat
