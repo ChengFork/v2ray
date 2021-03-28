@@ -18,7 +18,7 @@ Besides, it's a fork of [v2ray](<https://github.com/Magisk-Modules-Repo/v2ray>)
 
 You can download the release installer zip file and install it via the Magisk Manager App.
 
-Before install this module, you have to make sure curl and busybox exists in your system. Otherwise, you can install Busybox for Android NDK and Cross Compiled Binaries modules.
+Before install this module, you have to make sure curl and busybox exists in your system. Otherwise, you should install Busybox for Android NDK and Cross Compiled Binaries modules before install the module.
 
 ## Config
 
