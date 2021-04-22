@@ -9,7 +9,8 @@ Besides, it's a fork of [v2ray](<https://github.com/Magisk-Modules-Repo/v2ray>)
 * [Xray core](<https://github.com/xtls/xray-core>)
 * [dnscrypt-proxy](<https://github.com/DNSCrypt/dnscrypt-proxy>)
 * [magisk-module-installer](https://github.com/topjohnwu/magisk-module-installer)
-
+* [v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)
+* 
 - Xray service script and Android transparent proxy iptables script
 
 
