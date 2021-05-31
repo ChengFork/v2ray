@@ -44,10 +44,10 @@ if [ "$?" != "0" ] ; then
   ui_print "Error: Download Xray core failed."
   exit 1
 fi
-for i in geosite geoip; do
-  curl "${download_xray_link}/$i.dat" -k -L -o "${download_rules_dir}/$i.dat" >&2
+for name in geosite geoip; do
+  curl "${download_xray_link}/$name.dat" -k -L -o "${download_rules_dir}/$name.dat" >&2
   if [ "$?" != "0" ] ; then
-  ui_print "Error: Download $i failed."
+  ui_print "Error: Download $name failed."
   exit 1
 fi
 done
