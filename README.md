@@ -9,6 +9,7 @@ Besides, it's a fork of [v2ray](<https://github.com/Magisk-Modules-Repo/v2ray>)
 * [Xray core](<https://github.com/xtls/xray-core>)
 * [dnscrypt-proxy](<https://github.com/DNSCrypt/dnscrypt-proxy>)
 * [magisk-module-installer](https://github.com/topjohnwu/magisk-module-installer)
+* [v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)
 
 - Xray service script and Android transparent proxy iptables script
 
@@ -16,9 +17,9 @@ Besides, it's a fork of [v2ray](<https://github.com/Magisk-Modules-Repo/v2ray>)
 
 ## Install
 
-You can download the release installer zip file and install it via the Magisk Manager App.
+You can download the [release](<https://github.com/HoshinoNeko/Xray-For-Magisk/releases>) installer zip file and install it via the Magisk Manager App.
 
-Before install this module, you have to make sure curl and busybox exists in your system. Otherwise, you can install Busybox for Android NDK and Cross Compiled Binaries modules.
+Before install this module, you have to make sure curl and busybox exists in your system. Otherwise, you should install Busybox for Android NDK and Cross Compiled Binaries modules before install the module.
 
 ## Config
 
