@@ -45,7 +45,7 @@ if [ "$?" != "0" ] ; then
   exit 1
 fi
 for name in geosite geoip; do
-  curl "${download_xray_link}/$name.dat" -k -L -o "${download_rules_dir}/$name.dat" >&2
+  curl "${official_rules_dat}/$name.dat" -k -L -o "${download_rules_dir}/$name.dat" >&2
   if [ "$?" != "0" ] ; then
   ui_print "Error: Download $name failed."
   exit 1
@@ -96,7 +96,7 @@ echo "id=xray" > $MODPATH/module.prop
 echo "name=Xray For Magisk" >> $MODPATH/module.prop
 echo -n "version=" >> $MODPATH/module.prop
 echo ${latest_xray_version} >> $MODPATH/module.prop
-echo "versionCode=20210328" >> $MODPATH/module.prop
+echo "versionCode=20210610" >> $MODPATH/module.prop
 echo "author=HoshinoNeko" >> $MODPATH/module.prop
 echo "description=Xray core with service scripts for Android && A fork of Magisk-Modules-Repo/v2ray from chendefine" >> $MODPATH/module.prop
 
