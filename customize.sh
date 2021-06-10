@@ -45,6 +45,7 @@ if [ "$?" != "0" ] ; then
   exit 1
 fi
 for name in geosite geoip; do
+  ui_print "- Downloading ${name}.dat from ${official_rules_dat}/$name.dat to ${download_rules_dir}/$name.dat"
   curl "${official_rules_dat}/$name.dat" -k -L -o "${download_rules_dir}/$name.dat" >&2
   if [ "$?" != "0" ] ; then
   ui_print "Error: Download $name failed."
